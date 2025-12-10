@@ -1,4 +1,4 @@
-import MainPage from "@/components/MainPage.";
+import MainPage from "@/components/MainPage";
 
 import type { Metadata } from 'next'
 

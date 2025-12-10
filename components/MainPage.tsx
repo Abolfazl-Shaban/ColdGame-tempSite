@@ -24,25 +24,25 @@ export default function Home() {
       name: "Discord",
       href: "https://discord.coldgame.ir",
       icon: "/discord.svg",
-      color: "#5d6bf2",
+      colorClass: "bg-[#5d6bf2]",
     },
     {
       name: "Telegram",
       href: "https://t.me/ColdGame_ir",
       icon: "/telegram.svg",
-      color: "#30acec",
+      colorClass: "bg-[#30acec]",
     },
     {
       name: "Eitaa",
       href: "https://eitaa.com/coldgame",
       icon: "/eitta.svg",
-      color: "#ef7f07",
+      colorClass: "bg-[#ef7f07]",
     },
     {
       name: "Rubika",
       href: "https://rubika.ir/coldgame",
       icon: "/rubika.png",
-      color: "#6eb90b",
+      colorClass: "bg-[#6eb90b]",
     },
   ];
 
@@ -59,9 +59,9 @@ export default function Home() {
               height={40}
               className="w-10 h-10"
             />
-            <h1 className="text-2xl sm:text-3xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">
               کولدگیم - ColdGame
-            </h1>
+            </h2>
           </div>
         </div>
       </header>
@@ -82,16 +82,18 @@ export default function Home() {
           </p>
 
           {/* Server IP Section */}
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-5 mb-12 border border-gray-700/50 max-w-md mx-auto">
+          <div className="bg-gray-900/50  backdrop-blur-sm rounded-2xl p-4 sm:p-5 mb-12 border border-gray-700/50 max-w-md mx-auto">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center justify-between gap-2 min-w-0 flex-1">
-                <span className="flex w-3 h-3 rounded-full bg-green-500 shadow-green-400/80 shadow-sm mr-1" />
+                <div className="flex size-3 rounded-full bg-green-500 shadow-green-400/80 shadow-sm">
+                <span className=" size-full animate-ping rounded-full bg-green-500 " />
+                </div>
                 <span className="text-white/90 text-base sm:text-lg font-mono font-bold whitespace-nowrap truncate">
                   {serverIP}
                 </span>
                 <button
                   onClick={copyToClipboard}
-                  className="ml-2 flex items-center justify-center w-7 h-7 rounded bg-transparent hover:bg-coldgame-primary/15 transition-colors border-none outline-none focus-visible:ring-2 focus-visible:ring-coldgame-primary"
+                  className="ml-2 cursor-pointer flex items-center justify-center w-7 h-7 rounded bg-transparent hover:bg-coldgame-primary/15 transition-colors border-none outline-none focus-visible:ring-2 focus-visible:ring-coldgame-primary"
                   aria-label="کپی آدرس"
                   tabIndex={0}
                 >
@@ -122,10 +124,7 @@ export default function Home() {
                   target="_blank"
                   key={social.name}
                   href={social.href}
-                  className={`group relative p-3 rounded-2xl border border-gray-800/80 hover:[background:var(--hover-bg)] bg-gray-900/50 transition-all duration-300 transform hover:translate-y-[-4px] `}
-                  style={
-					  { ["--hover-bg"]: social.color } as React.CSSProperties
-					}
+                  className={`${social.colorClass} group relative p-3 rounded-2xl border border-gray-800/80 not-hover:bg-gray-900/50 transition-all duration-300 transform hover:translate-y-[-4px] `}
                   aria-label={`لینک ${social.name}`}
                 >
                   <div className="flex flex-col items-center space-y-3">
@@ -151,7 +150,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-4 space-x-reverse mb-4"></div>
           <p className="text-gray-400 text-sm">
-            © ۲۰۲۴ کولدگیم. تمامی حقوق محفوظ است.
+            © 2026 کولدگیم. تمامی حقوق محفوظ است.
           </p>
           <p className="text-gray-500 text-xs mt-2">آدرس سرور: {serverIP}</p>
         </div>

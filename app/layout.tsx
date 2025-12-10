@@ -95,7 +95,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f0f0f" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="min-h-screen bg-darker-gray text-white font-vazir antialiased">
+      <body className="min-h-screen   bg-darker-gray text-white font-vazir antialiased">
         {children}
       </body>
     </html>

@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-aqua: #00ffff;
+  --color-dark-gray: #1a1a1a;
+  --color-darker-gray: #0f0f0f;
+
+  --font-vazir: Vazirmatn, sans-serif;
+}
 
 
 .text-gradient {
